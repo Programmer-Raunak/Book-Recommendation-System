@@ -1,6 +1,16 @@
 import streamlit as st
 import pickle
+st.set_page_config(page_title="Recommendation System", page_icon="📚", layout="wide")
 
+# Hide hamburger menu and footer
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 books_list = pickle.load(open('book_list.pkl', 'rb'))
 similarity_scores = pickle.load(open('similarity.pkl', 'rb'))

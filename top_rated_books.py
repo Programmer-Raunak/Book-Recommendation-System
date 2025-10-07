@@ -6,6 +6,15 @@ top_books = pickle.load(open('top_books.pkl', 'rb'))
 
 st.set_page_config(page_title="Top Rated Books", layout="wide")
 
+# Hide hamburger menu and footer
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # Page Title
 st.title("📚 Top Rated Books")
 st.subheader("Explore the top 50 books based on ratings and popularity")
