@@ -3,15 +3,8 @@ import streamlit as st
 
 st.set_page_config(page_title="My App", page_icon="📚", layout="wide")
 
-# Hide hamburger menu and footer
-hide_streamlit_style = """
-<style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
-</style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+# Hide only Streamlit default menu and footer
+
 # Define the pages
 st.sidebar.title("sidebar")
 top_rated_book_page = st.Page("top_rated_books.py", title="📚Top Rated Books", icon="📚")

@@ -5,7 +5,7 @@ st.set_page_config(page_title="Recommendation System", page_icon="📚", layout=
 # Hide hamburger menu and footer
 hide_streamlit_style = """
 <style>
-#MainMenu {visibility: hidden;}
+
 footer {visibility: hidden;}
 header {visibility: hidden;}
 </style>
